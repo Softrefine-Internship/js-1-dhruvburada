@@ -10,12 +10,13 @@ function flatArray(arr) {
     const item = arr[i];
 
     if (Array.isArray(item)) {
-      const nested = flatArray(item); // recursive flatten
+      const nested = flatArray(item);
+
       for (let j = 0; j < nested.length; j++) {
         flatarray.push(nested[j]);
       }
     } else {
-      flatarray.push(item); // add primitive directly
+      flatarray.push(item);
     }
   }
 
