@@ -17,3 +17,7 @@ for (let i = 0; i < array.length - 1; i++) {
 }
 
 console.log("Sorted array:", array);
+
+//sort array using built in method
+
+const sorted = array.sort((a, b) => a - b);

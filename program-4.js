@@ -23,5 +23,14 @@ function mergeArray(arr1, arr2) {
   return mergedArray;
 }
 
-let result = mergeArray([3, 5, 1], [4, 2]);
+let arr1 = [3, 5, 1];
+
+let arr2 = [4, 2];
+let result = mergeArray(arr1, arr2);
 console.log(result);
+
+//Approach 2 using built in methods
+
+let merged = [...arr1, ...arr2].sort((a, b) => a - b);
+
+console.log(merged);

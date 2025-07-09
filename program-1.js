@@ -9,3 +9,13 @@ for (let i = 0; i < array.length; i++) {
 }
 
 console.log(copyarray);
+
+//method 2 copying array using map
+
+const newarr = array.map((val) => val);
+console.log(newarr);
+
+//method 3 using spread
+
+const newarr2 = [...array];
+console.log(newarr2);

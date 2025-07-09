@@ -23,4 +23,9 @@ function flatArray(arr) {
   return flatarray;
 }
 
-console.log(flatArray([1, 2, [3, 4], [5, [6, 7]]]));
+const input = [1, 2, [3, 4], [5, [6, 7]]];
+console.log(flatArray(input));
+
+//Approach 2 using built in methods
+
+console.log(input.flat(Infinity));
