@@ -12,7 +12,7 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 // Input: flowerbed = [1,0,0,0,1], n = 2
 // Output: false
 
-arr = [1, 0, 0, 0, 1];
+arr = [1, 0, 0, 0, 1, 0, 0];
 n = 2;
 
 function isPossible(arr, n) {
@@ -22,12 +22,14 @@ function isPossible(arr, n) {
       (arr[i + 1] == 0 || i + 1 == arr.length) &&
       (arr[i - 1] == 0 || i - 1 < 0)
     ) {
-      arr[i] = 1;
       n -= 1;
+      arr[i] = 1;
     }
+
+    // console.log(arr);
   }
 
-  if (n == 0) {
+  if (n <= 0) {
     return true;
   }
   return false;
